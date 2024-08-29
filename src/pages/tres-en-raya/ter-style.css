@@ -1,0 +1,121 @@
+@keyframes parpadear {
+  0%, 100% {
+  }
+  50% {
+    filter: brightness(1.5) drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  }
+}
+
+#tres-en-raya {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.indice p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.contador {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contador h3 {
+  font-size: 1em;
+  margin: 5px 0;
+  text-align: left;
+  text-align: center;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.ficha {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ficha:hover {
+  transform: scale(1.1);
+}
+
+.ficha.ficha-red {
+  border-color: var(--red);
+}
+
+.ficha.ficha-blue {
+  border-color: blue;
+}
+
+.reset {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px
+}
+
+
+
+.parpadear {
+  animation: parpadear 1s infinite;
+  transition: transform 0.3s, filter 0.3s;
+  
+}
+
+.reset-marcador-ter{
+  background-color:var(--red-reset);
+}
+.reset-marcador-ter:hover{
+  background-color: var( --red-reset-dark);
+}
+
+
+@media (max-width: 768px) {
+  #tres-en-raya {
+    padding: 10px; 
+  }
+
+  .indice p {
+    font-size: 1em; 
+    margin: 5px 0; 
+  }
+
+  .contador h3 {
+    font-size: 0.9em;
+  }
+
+  .tablero {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    max-width: 300px; 
+  }
+
+  .ficha {
+    width: 80px; 
+    height: 80px;
+  }
+
+  .reset {
+    margin-top: 15px; 
+    gap: 10px;
+  }
+  
+  .parpadear {
+    animation: parpadear 0.8s infinite;
+  }
+}

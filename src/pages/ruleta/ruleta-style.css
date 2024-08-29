@@ -1,0 +1,190 @@
+@keyframes parpadeo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Clase que aplica la animación de parpadeo */
+.parpadeo-ruleta {
+  animation: parpadeo 1s infinite; /* 1s de duración, animación infinita */
+}
+
+#ruleta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+#ruleta-saldo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#dinero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dinero-apostado{
+  margin: 5px;
+}
+
+#tablero {
+  margin-top: 1px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 10px solid #000;
+  position: relative;
+  overflow: hidden;
+  transition: transform 4s ease-out;
+}
+
+.sector {
+  width: 162%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: 0% 100%;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  display: flex;
+}
+
+.numero {
+  width: 55%;
+  height: 175%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2em;
+  transform: rotate(80deg);
+}
+
+.red {
+  background-color: red;
+}
+.black {
+  background-color: black;
+}
+.green {
+  background-color: green;
+}
+
+#flecha {
+  height: 50px;
+  width: 50px;
+}
+
+#reset-saldo{
+  margin-top: 5px;
+  background-color: var( --red-reset);
+}
+#reset-saldo:hover{
+  background-color: var( --red-reset-dark)
+}
+
+
+#apuestas {
+  display: flex;
+  height: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  align-content: center;
+  height: 500px;
+  width: 700px;
+margin-bottom: 30px;
+}
+
+.numero-tablero {
+  width: 90px;
+  height: 90px;
+  color:var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+
+.apuesta-black,
+.apuesta-red {
+  width: 46.5%;
+}
+
+
+
+#ficha {
+  height: 40%;
+  position: relative;
+  top: 25px;
+  
+}
+
+
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  header .button_header {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+ 
+
+  #ruleta-saldo {
+    margin-bottom: 10px;
+  }
+
+ 
+  #tablero {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .numero {
+    font-size: 0.9em;
+  }
+
+  #flecha {
+    height: 40px;
+    width: 40px;
+  }
+
+
+  #apuestas {
+    width: 100%;
+    height: auto;
+  }
+
+  .numero-tablero {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+  }
+
+  .apuesta-black,
+  .apuesta-red {
+    width: 100%;
+  }
+
+
+}

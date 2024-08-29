@@ -1,0 +1,32 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --white: #FFFFFF;       
+    --white-background:  #F8F9FA;      
+    --background-header:  #343A40;
+    --red:red;
+    --red-reset:#DC3545;
+    --red-reset-dark:#C82333;
+    --color-button-deafult:  #FD7E14;
+    --color-dark-button-deafult: #E8590C;
+  
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+main {
+  flex: 1;
+  background-color: var(--white-background);
+}

@@ -1,0 +1,45 @@
+header {
+  background-color: var(--background-header);
+  min-height: 10dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--white);
+  gap: 5px;
+  
+}
+
+footer {
+  background-color: var(--background-header);
+  height: 10dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > ul {
+  list-style-type: none;
+  padding: 0; 
+  color: var(--white);
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; 
+    min-height: 18dvh; 
+    gap: 7px;
+    padding: 10px;
+    
+  }
+
+  footer {
+    height: 15dvh; 
+    padding: 10px;
+    flex-direction: column; 
+  }
+
+  footer > ul {
+    margin-top: 10px;
+  }
+}

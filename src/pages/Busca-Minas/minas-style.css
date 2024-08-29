@@ -1,0 +1,96 @@
+
+.busca-minas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.puntuacion{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+
+.celda {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.celda.revelada {
+  background-color: #f8f8f8;
+  cursor: default;
+}
+
+.celda.mina {
+  background-color:var(--red);
+}
+
+.reset-minas{
+  display: flex;
+  gap: 30px;
+}
+
+.tablero-minas {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 9px;
+  background-color: white;
+  border: solid rgb(41, 40, 40) 1px;
+}
+
+#reset-button-puntuacion{
+  background-color: var(--red-reset);
+}
+
+reset-button-puntuacion:hover{
+  background-color: var(--red-reset-dark);
+}
+
+@media (max-width: 768px) {
+  .busca-minas {
+    gap: 30px; 
+    padding: 10px; 
+  }
+
+  .puntuacion {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .tablero-minas {
+    display: grid;
+    grid-template-columns: repeat(10, 25px);
+    grid-template-rows: repeat(10, 25px);
+    gap: 8px;
+    border: solid black 1px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
+
+  .celda {
+    width: 30px;
+    height: 30px; 
+    line-height: 30px;
+  }
+
+  .reset-minas {
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center; 
+  }
+
+  #reset-button-puntuacion {
+    padding: 8px 16px; 
+    font-size: 14px;
+  }
+
+  #reset-button-puntuacion:hover {
+    background-color: var(--red-reset-dark);
+  }
+}
